@@ -19,3 +19,26 @@ try {
 } catch (error) {
     console.log(error.message); // Exibe a mensagem de erro
 }
+
+// Importando a biblioteca moment.js
+import moment from 'moment';
+
+// Função para calcular a idade com base no ano de nascimento
+function calcularIdade(anoNascimento) {
+    // Obtém o ano atual usando Moment.js
+    const anoAtual = moment().year();
+    
+    // Calcula a idade subtraindo o ano de nascimento do ano atual
+    const idade = anoAtual - anoNascimento;
+    
+    return idade;
+}
+
+// Ano de nascimento
+const anoNascimento = 1995;
+
+// Calcula a idade
+const idade = calcularIdade(anoNascimento);
+
+// Exibe a idade
+console.log(`Idade: ${idade} anos`);
