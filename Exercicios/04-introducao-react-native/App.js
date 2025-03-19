@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, ScrollView } from 'react-native';
 
 //Componente principal
 // Ele deve retornar o que será renderizado na tela (Template feito com JSX)
@@ -13,6 +13,7 @@ export default function App() {
 
   //Retorno com JSX
   return (
+    <ScrollView>
     <View style={styles.container}>
       {/* Comentario dentro do Template JSX */}
       {/* Código JavaScript*/}
@@ -20,20 +21,25 @@ export default function App() {
       <Text style={styles.text}>Aplicativo está aberto !!!</Text>
       <Button title='Alerta' onPress={alerta}></Button>
       <Image
-      source={{ uri:'https://blog.autocompara.com.br/wp-content/uploads/2024/06/carros-esportivos-1024x683.jpeg.webp'}}
-      style={{
-        height: 300,
-        with: 300
+      source= {{uri:'https://pbs.twimg.com/media/Ej5HqkuX0AAve9T.jpg'}}
+        style={{
+      height: 300,
+        width: 300
+    }}
+    
+    />
 
-      }}
-      />
-      
+
+      <StatusBar style="auto" />
     </View>
+    </ScrollView>
   );
 }
 
+//
 const styles = StyleSheet.create({
   container: {
+    paddingTop: 100,
     flex: 1,
     backgroundColor: '#3299CC',
     alignItems: 'center',
@@ -43,6 +49,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: 25,
+    fontSize: 30,
+    textShadowColor: 'yellow',
+    textShadowRadius: 100,
   },
+  
 });
