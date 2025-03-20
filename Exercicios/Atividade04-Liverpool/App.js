@@ -4,7 +4,7 @@ import { Button, Image, StyleSheet, Text, View, ScrollView, Alert } from "react-
 
 export default function App() {
   const alerta = () => {
-    Alert.alert("You'll Never Walk Alone !!!");
+    Alert.alert("GOL DO LIVERPOOOOOOL !");
   };
 
   return (
@@ -16,6 +16,7 @@ export default function App() {
       <Text style={styles.info}>País: Inglaterra</Text>
       <Text style={styles.info}>Cidade: Liverpool</Text>
       <Text style={styles.info}>Apelido: Reds</Text>
+      <Text style={styles.info}>You'll Never Walk Alone !!!</Text>
 
       <Image
         style={styles.image}
